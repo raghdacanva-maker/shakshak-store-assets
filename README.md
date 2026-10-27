@@ -1,0 +1,1 @@
+# shakshak-store-assets
