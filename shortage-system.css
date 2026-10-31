@@ -1,0 +1,43 @@
+/* Shakshak shortages — every rule is scoped to elements this system marks or creates.
+   No selector here can match a normal product's controls. */
+
+#shk-shortage-toast {
+  position: fixed;
+  right: 16px;
+  bottom: 96px;
+  z-index: 2147483000;
+  max-width: min(400px, calc(100vw - 32px));
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border-right: 4px solid #f6a200;
+  background: #17345d;
+  color: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  direction: rtl;
+  text-align: right;
+  font: 600 13px/1.8 Cairo, Arial, sans-serif;
+}
+#shk-shortage-toast[hidden] {
+  display: none;
+}
+
+.shk-shortage-notice {
+  box-sizing: border-box;
+  margin: 8px 0;
+  padding: 10px 12px;
+  border: 1px solid #f6d188;
+  border-right: 4px solid #f6a200;
+  border-radius: 9px;
+  background: #fff8e8;
+  color: #17345d;
+  direction: rtl;
+  text-align: right;
+  font: 600 12px/1.8 Cairo, Arial, sans-serif;
+}
+
+[data-cart="item"][data-shk-shortage="1"] [data-cart="item-increase"],
+button[aria-label="Increase quantity"][data-shk-shortage="1"] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
